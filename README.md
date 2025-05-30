@@ -1,167 +1,76 @@
-# temp_converter_final
+### Temperature Converter App
 
-# Temperature Converter Flutter App
-
-A beautiful and responsive Flutter application for converting temperatures between Fahrenheit and Celsius with a clean Material Design interface and comprehensive features.
+This is a Flutter mobile application that converts temperatures between Fahrenheit and Celsius. It includes input validation, conversion history tracking, and supports both portrait and landscape orientations.
 
 ## Features
 
-### Core Functionality
-- **Bi-directional Temperature Conversion**: Convert between Fahrenheit and Celsius using precise mathematical formulas
-- **Input Validation**: Comprehensive validation with clear error messages for empty fields and invalid inputs
-- **Conversion History**: Track all conversions with timestamps and operation types
-- **Real-time Updates**: Dynamic interface updates when switching conversion types
+- Convert between Fahrenheit and Celsius
+- Input validation using Form and TextFormField
+- Accurate calculations to two decimal places
+- Conversion history list that stores recent conversions
+- Responsive layout for both portrait and landscape modes
+- Clear button to reset the input
+- Clear history button to remove past conversions
+- Custom themed user interface with warm and cool colors based on conversion type
 
-### User Experience
-- **Responsive Design**: Optimized layouts for both portrait and landscape orientations
-- **Dynamic Theming**: Temperature-aware color schemes (warm orange for Fahrenheit, cool blue for Celsius)
-- **Haptic Feedback**: Tactile response for better user interaction
-- **Material Design**: Follows Google's Material Design principles with proper elevation and spacing
+## How to Run the App
 
-### Technical Features
-- **State Management**: Efficient use of StatefulWidget with setState()
-- **Form Validation**: Robust input validation with GlobalKey<FormState>
-- **Responsive Layout**: OrientationBuilder for adaptive UI across device orientations
-- **Clean Architecture**: Modular code structure with separated concerns
-
-## Screenshots
-
-### Portrait Mode
-- Clean, vertically stacked interface
-- Large, accessible buttons and input fields
-- Clear conversion type selection
-
-### Landscape Mode
-- Side-by-side layout for optimal screen usage
-- Conversion interface and history displayed simultaneously
-- Reduced padding and spacing for compact design
-
-## Technical Implementation
-
-### Widgets Used
-- **StatefulWidget**: For dynamic state management
-- **TextFormField**: Input field with validation
-- **RadioListTile**: Conversion type selection
-- **ElevatedButton**: Primary action buttons
-- **OutlinedButton**: Secondary action buttons
-- **Card**: Visual grouping and elevation
-- **OrientationBuilder**: Responsive layout management
-- **SingleChildScrollView**: Scroll handling for overflow prevention
-
-### Key Classes
-- `TemperatureConverterApp`: Main application widget with theme configuration
-- `ConversionHistory`: Data model for storing conversion records
-- `ConversionType`: Enum for conversion type management
-- `TemperatureConverterPage`: Main page with conversion functionality
-
-### Conversion Formulas
-- **Fahrenheit to Celsius**: °C = (°F - 32) × 5/9
-- **Celsius to Fahrenheit**: °F = °C × 9/5 + 32
-
-## Getting Started
-
-### Prerequisites
-- Flutter SDK (latest stable version)
-- Dart SDK
-- Android Studio or VS Code with Flutter extensions
-- Android device/emulator or iOS device/simulator
-
-### Installation
-
-1. **Clone the repository**
+1. Clone the repository:
    ```bash
-   git clone <repository-url>
-   cd temp_converter_final
-   ```
+   git clone https://github.com/your-username/temperature-converter.git
+   cd temperature-converter
 
-2. **Install dependencies**
+
+2. Get dependencies:
+
    ```bash
    flutter pub get
    ```
 
-3. **Run the application**
+3. Run the app:
+
    ```bash
    flutter run
    ```
 
-### Development Setup
+Make sure an Android emulator or physical device is connected.
 
-1. **Check Flutter installation**
-   ```bash
-   flutter doctor
-   ```
-
-2. **Enable USB debugging** (for Android devices)
-   - Settings → About Phone → Tap Build Number 7 times
-   - Settings → Developer Options → Enable USB Debugging
-
-3. **Connect device or start emulator**
-   ```bash
-   flutter devices
-   ```
-
-## Code Structure
+## Project Structure
 
 ```
-lib/
-└── main.dart                 # Main application file
-    ├── TemperatureConverterApp   # App widget with theme
-    ├── ConversionHistory         # Data model
-    ├── ConversionType           # Enum for conversion types
-    └── TemperatureConverterPage # Main functionality
+/lib
+  main.dart             # Main app logic and UI widgets
+/android
+/ios
+/pubspec.yaml           # Project metadata and dependencies
 ```
 
-## Key Features Breakdown
+## Implementation Overview
 
-### Responsive Design
-- **Portrait Mode**: Vertical stack layout with optimized spacing
-- **Landscape Mode**: Horizontal layout with side-by-side sections
-- **Dynamic Padding**: Reduced spacing in landscape for better fit
+* Uses StatefulWidget and setState for managing UI updates
+* RadioListTile allows switching between conversion directions
+* TextFormField handles numeric input with validation
+* OrientationBuilder is used to build different layouts based on device orientation
+* Conversion logic:
 
-### Theme System
-- **Warm Theme**: Orange colors for Fahrenheit operations
-- **Cool Theme**: Blue colors for Celsius operations
-- **Consistent Styling**: Unified design across all components
+  * Celsius = (Fahrenheit - 32) \* 5 / 9
+  * Fahrenheit = Celsius \* 9 / 5 + 32
+* ConversionHistory model stores and formats past conversion results
 
-### Input Validation
-- **Empty Field Check**: Prevents submission without input
-- **Number Validation**: Ensures only valid numbers are accepted
-- **Error Messages**: Clear, helpful feedback for users
+## Screenshots
 
-### History Management
-- **Automatic Tracking**: All conversions saved automatically
-- **Visual Distinction**: Color-coded operation types
-- **Limited Display**: Shows latest 10 entries for performance
-- **Clear Functionality**: Option to clear history
+Insert screenshots here once available:
 
-## Performance Optimizations
-
-- **Efficient State Management**: Minimal rebuilds with targeted setState calls
-- **Memory Management**: Proper disposal of TextEditingController
-- **Scroll Optimization**: SingleChildScrollView for overflow handling
-- **Responsive Calculations**: Dynamic sizing based on screen orientation
-
-## Design Principles
-
-- **Material Design**: Follows Google's design guidelines
-- **Accessibility**: High contrast ratios and clear labeling
-- **Usability**: Intuitive navigation and clear visual hierarchy
-- **Consistency**: Unified styling and behavior patterns
-
-## Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+* Portrait view
+* Landscape view
+* Input and result example
+* Conversion history list
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is open-source and available under the MIT License.
 
-## Acknowledgments
+## Author
 
-- Flutter team for the excellent framework
-- Material Design guidelines for UI inspiration
-- Flutter community for best practices and examples
+Marie Elyse UYIRINGIYE
+GitHub: https://github.com/elyse003
